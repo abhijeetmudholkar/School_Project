@@ -423,7 +423,7 @@ body {
   }
 }
 /* testmonial */
-.carousel img {
+/* .carousel img {
   width: 70px;
   max-height: 70px;
   border-radius: 50%;
@@ -468,4 +468,18 @@ body {
   border-radius: 50%;
   top: 50%;
   transform: translateY(-50%);
+} */
+
+.news-img {
+  width: 180px;
+  height: 240px;
+  object-fit: cover;
+  cursor: pointer;
+  border: 1px solid #141414;
+  transition: 0.3s;
 }
+
+.news-img:hover {
+  transform: scale(1.05);
+}
+
