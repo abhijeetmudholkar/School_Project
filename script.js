@@ -1,3 +1,30 @@
+/* =========================
+   SCROLL REVEAL SCRIPT
+========================= */
+document.addEventListener("DOMContentLoaded", function () {
+
+  const revealItems = document.querySelectorAll(".scroll-reveal");
+
+  const revealOnScroll = new IntersectionObserver(
+    function (entries) {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("reveal-active");
+        }
+      });
+    },
+    {
+      threshold: 0.15
+    }
+  );
+
+  revealItems.forEach(item => {
+    revealOnScroll.observe(item);
+  });
+
+});
+
+
 document.addEventListener("DOMContentLoaded", function () {
 
   const menuTrigger = document.querySelector(".menu-trigger");
