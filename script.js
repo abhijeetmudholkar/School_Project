@@ -23,6 +23,26 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
 });
+// scroll badge
+let lastScrollTop = 0;
+const badge = document.getElementById('scrollBadge');
+
+window.addEventListener('scroll', () => {
+  const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+  if (scrollTop > lastScrollTop && scrollTop > 50) {
+    // Scrolling down → show badge
+    badge.classList.add('show');
+    badge.classList.remove('hide');
+  } else {
+    // Scrolling up → hide badge
+    badge.classList.add('hide');
+    badge.classList.remove('show');
+  }
+
+  lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
+});
+
 
 
 document.addEventListener("DOMContentLoaded", function () {
