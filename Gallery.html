@@ -10,26 +10,17 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 
 <style>
-    /* =========================
-   SCROLL REVEAL ANIMATION
-========================= */
-.scroll-reveal {
-  opacity: 0;
-  transform: translateY(60px);
-  transition: opacity 0.8s ease, transform 0.8s ease;
-}
-
-.scroll-reveal.reveal-active {
-  opacity: 1;
-  transform: translateY(0);
-}
-
 body{
   background:#f8f9fa;
   font-family:"Segoe UI",sans-serif;
 }
 
-/* Heading */
+/* NAVBAR GAP */
+.school-gallery{
+  padding-top:120px;
+}
+
+/* HEADING */
 .school-gallery h2{
   color:#143a59;
 }
@@ -48,7 +39,7 @@ body{
   color:#fff;
 }
 
-/* CARD */
+/* GALLERY CARD */
 .gallery-card{
   overflow:hidden;
   border-radius:12px;
@@ -66,7 +57,7 @@ body{
   transform:scale(1.08);
 }
 
-/* FILTER FADE */
+/* FADE EFFECT */
 .gallery-container{
   position:relative;
 }
@@ -93,7 +84,15 @@ body{
   object-fit:contain;
 }
 
-/* NAV BUTTONS */
+/* CLOSE BUTTON */
+.modal-close{
+  position:absolute;
+  top:15px;
+  right:15px;
+  z-index:10;
+}
+
+/* NAV ARROWS */
 .gallery-nav{
   position:absolute;
   top:50%;
@@ -132,39 +131,75 @@ body{
   <div class="row g-4 gallery-container">
     <div class="gallery-fade"></div>
 
-    <div class="col-lg-4 col-md-6 gallery-item events scroll-reveal">
-      <div class="gallery-card" data-img="https://picsum.photos/1200/800?1">
-        <img src="https://picsum.photos/600/400?1">
+    <div class="col-lg-4 col-md-6 gallery-item events">
+      <div class="gallery-card" data-img="./assets/e1.jpg">
+        <img src="./assets/e1.jpg">
       </div>
     </div>
 
-    <div class="col-lg-4 col-md-6 gallery-item sports scroll-reveal">
-      <div class="gallery-card" data-img="https://picsum.photos/1200/800?2">
-        <img src="https://picsum.photos/600/400?2">
+    <div class="col-lg-4 col-md-6 gallery-item events">
+      <div class="gallery-card" data-img="./assets/e2.jpg">
+        <img src="./assets/e2.jpg">
       </div>
     </div>
 
-    <div class="col-lg-4 col-md-6 gallery-item classroom scroll-reveal">
-      <div class="gallery-card" data-img="https://picsum.photos/1200/800?3">
-        <img src="https://picsum.photos/600/400?3">
+    <div class="col-lg-4 col-md-6 gallery-item events">
+      <div class="gallery-card" data-img="./assets/e3.jpg">
+        <img src="./assets/e3.jpg">
       </div>
     </div>
 
-    <div class="col-lg-4 col-md-6 gallery-item annual scroll-reveal">
-      <div class="gallery-card" data-img="https://picsum.photos/1200/800?4">
-        <img src="https://picsum.photos/600/400?4">
+    <div class="col-lg-4 col-md-6 gallery-item sports">
+      <div class="gallery-card" data-img="./assets/e4.jpg">
+        <img src="./assets/e4.jpg">
       </div>
     </div>
 
-    <div class="col-lg-4 col-md-6 gallery-item sports scroll-reveal">
-      <div class="gallery-card" data-img="https://picsum.photos/1200/800?5">
-        <img src="https://picsum.photos/600/400?5">
+    <div class="col-lg-4 col-md-6 gallery-item sports">
+      <div class="gallery-card" data-img="./assets/e5.jfif">
+        <img src="./assets/e5.jfif">
       </div>
     </div>
 
-    <div class="col-lg-4 col-md-6 gallery-item events scroll-reveal">
-      <div class="gallery-card" data-img="https://picsum.photos/1200/800?6">
-        <img src="https://picsum.photos/600/400?6">
+    <div class="col-lg-4 col-md-6 gallery-item sports">
+      <div class="gallery-card" data-img="./assets/e6.jfif">
+        <img src="./assets/e6.jfif">
+      </div>
+    </div>
+
+    <div class="col-lg-4 col-md-6 gallery-item classroom">
+      <div class="gallery-card" data-img="./assets/e7.jfif">
+        <img src="./assets/e7.jfif">
+      </div>
+    </div>
+
+    <div class="col-lg-4 col-md-6 gallery-item classroom">
+      <div class="gallery-card" data-img="./assets/e8.jpg">
+        <img src="./assets/e8.jpg">
+      </div>
+    </div>
+
+    <div class="col-lg-4 col-md-6 gallery-item classroom">
+      <div class="gallery-card" data-img="./assets/e9.avif">
+        <img src="./assets/e9.avif">
+      </div>
+    </div>
+
+    <div class="col-lg-4 col-md-6 gallery-item annual">
+      <div class="gallery-card" data-img="./assets/e1.jpg">
+        <img src="./assets/e1.jpg">
+      </div>
+    </div>
+
+    <div class="col-lg-4 col-md-6 gallery-item annual">
+      <div class="gallery-card" data-img="./assets/e2.jpg">
+        <img src="./assets/e2.jpg">
+      </div>
+    </div>
+
+    <div class="col-lg-4 col-md-6 gallery-item annual">
+      <div class="gallery-card" data-img="./assets/e3.jpg">
+        <img src="./assets/e3.jpg">
       </div>
     </div>
 
@@ -176,15 +211,21 @@ body{
 <div class="modal fade" id="galleryModal" tabindex="-1">
   <div class="modal-dialog modal-xl modal-dialog-centered">
     <div class="modal-content">
+
+      <button type="button"
+        class="btn-close btn-close-white modal-close"
+        data-bs-dismiss="modal"></button>
+
       <div class="modal-body position-relative text-center">
         <span class="gallery-nav gallery-prev">&#10094;</span>
         <img id="modalImage">
         <span class="gallery-nav gallery-next">&#10095;</span>
       </div>
+
     </div>
   </div>
 </div>
-<script src="./script.js"></script>
+
 <script>
 const buttons = document.querySelectorAll(".gallery-filters .btn");
 const items = document.querySelectorAll(".gallery-item");
@@ -213,15 +254,16 @@ buttons.forEach(btn=>{
   };
 });
 
-/* MODAL OPEN */
+/* MODAL */
 const modal = new bootstrap.Modal(document.getElementById("galleryModal"));
 const modalImg = document.getElementById("modalImage");
 
-document.querySelectorAll(".gallery-card").forEach((card,i)=>{
+/* IMAGE CLICK */
+document.querySelectorAll(".gallery-card").forEach(card=>{
   card.onclick = ()=>{
     visibleImages = [...document.querySelectorAll(".gallery-item")]
-      .filter(item=>item.style.display!=="none")
-      .map(item=>item.querySelector(".gallery-card").dataset.img);
+      .filter(item => item.style.display !== "none")
+      .map(item => item.querySelector(".gallery-card").dataset.img);
 
     currentIndex = visibleImages.indexOf(card.dataset.img);
     modalImg.src = visibleImages[currentIndex];
@@ -229,11 +271,13 @@ document.querySelectorAll(".gallery-card").forEach((card,i)=>{
   };
 });
 
-/* NEXT / PREV */
+/* NEXT */
 document.querySelector(".gallery-next").onclick = ()=>{
   currentIndex = (currentIndex + 1) % visibleImages.length;
   modalImg.src = visibleImages[currentIndex];
 };
+
+/* PREV */
 document.querySelector(".gallery-prev").onclick = ()=>{
   currentIndex = (currentIndex - 1 + visibleImages.length) % visibleImages.length;
   modalImg.src = visibleImages[currentIndex];
