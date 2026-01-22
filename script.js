@@ -1,6 +1,20 @@
 /* =========================
    SCROLL REVEAL SCRIPT
 ========================= */
+
+
+document.addEventListener("DOMContentLoaded", function () {
+
+  // one-time popup per session
+  if(!sessionStorage.getItem("popupShown")){
+    const popup = new bootstrap.Modal(
+      document.getElementById("admissionPopup")
+    );
+    popup.show();
+    sessionStorage.setItem("popupShown", "true");
+  }
+
+});
 document.addEventListener("DOMContentLoaded", function () {
 
   const revealItems = document.querySelectorAll(".scroll-reveal");
@@ -105,3 +119,13 @@ if (window.matchMedia("(min-width:576px)").matches) {
     document.getElementById("modalImage").src = src;
   }
 
+
+  // msges
+//  const whgsCards = document.querySelectorAll('.whgs-message-card');
+//   let whgsIndex = 0;
+
+//   setInterval(() => {
+//     whgsCards[whgsIndex].classList.remove('active');
+//     whgsIndex = (whgsIndex + 1) % whgsCards.length;
+//     whgsCards[whgsIndex].classList.add('active');
+//   }, 5000); // change every 5 sec

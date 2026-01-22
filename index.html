@@ -1,551 +1,824 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>Schooling</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Schooling</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-  <!-- Bootstrap -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
 
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- ADMISSION POPUP -->
+    <div class="modal fade admission-modal" id="admissionPopup" tabindex="-1">
+      <div class="modal-dialog modal-dialog-centered modal-xl">
+        <div class="modal-content admission-content">
+          <!-- CLOSE BUTTON -->
+          <button
+            type="button"
+            class="btn-close popup-close"
+            data-bs-dismiss="modal"
+          ></button>
 
-<!-- HEADER -->
-<header class="header-area header-sticky">
-  <div class="container">
-    <nav class="main-nav">
-      <a href="#" class="logo">LMB Public School</a>
+          <!-- POPUP IMAGE -->
+          <img src="./assets/clgImg/NSB05799.JPG.jpeg" alt="Admissions Open" />
+        </div>
+      </div>
+    </div>
 
-      <ul class="nav">
-        <li><a href="#top">Home</a></li>
-        <li><a href="./Gallery.html">Gallery</a></li>
-        <li><a href="#">Apply Now</a></li>
+    <!-- HEADER -->
+    <header class="header-area header-sticky">
+      <div class="container">
+        <nav class="main-nav">
+          <a href="#" class="logo">LMB Public School</a>
 
-        <li class="has-sub">
-          <a href="javascript:void(0)">Pages</a>
-          <ul class="sub-menu">
-            <li><a href="#">About Us</a></li>
-            <li><a href="#">Our Team</a></li>
+          <ul class="nav">
+            <li><a href="#top">Home</a></li>
+            <li><a href="./Gallery.html">Gallery</a></li>
+            <li><a href="#">Apply Now</a></li>
+
+            <li class="has-sub">
+              <a href="javascript:void(0)">Pages</a>
+              <ul class="sub-menu">
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Our Team</a></li>
+              </ul>
+            </li>
+
+            <li><a href="#">Courses</a></li>
+            <li><a href="#">Contact Us</a></li>
           </ul>
-        </li>
 
-        <li><a href="#">Courses</a></li>
-        <li><a href="#">Contact Us</a></li>
-      </ul>
-
-      <div class="menu-trigger">
-        <span></span>
-        <span></span>
-        <span></span>
+          <div class="menu-trigger">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+        </nav>
       </div>
-    </nav>
-  </div>
-</header>
-<!-- Floating Badge -->
-<div id="scrollBadge">
-  <img src="assets/badge.png" alt="Wisdom High Badge">
-</div>
-
-<!-- HERO -->
-<section class="main-banner" id="top">
-  <video autoplay muted loop playsinline id="bg-video">
-    <source src="assets/videoplayback.webm" type="video/mp4">
-  </video>
-
-  <div class="video-overlay scroll-reveal">
-    <div class="container">
-      <div class="caption">
-        <h2>Welcome to LMB Public School</h2>
-        <!-- <h2>Welcome to Education</h2> -->
-        <h4>
-          A place where learning begins and dreams take shape.
-        </h4>
-        <a href="#" class="btn btn-danger rounded-pill px-4">Join Us Now!</a>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="exam-success-wrapper scroll-reveal">
-  <section class="exam-success-strip">
-    <div class="container">
-      <div class="strip-content scroll-reveal">
-        <h3 class="scroll-reveal">
-         Learning Today. Leading Tomorrow.
-          <!-- <span>Learning Today. Leading Tomorrow.</span> -->
-        </h3>
-        <a href="#" class="know-more-btn">Know More</a>
-      </div>
-    </div>
-  </section>
-</section>
-<!-- carsoul -->
- <div id="heroCarousel" class="carousel slide carousel-fade scroll-reveal">
-
-  <!-- Indicators (optional) -->
-  <div class="carousel-indicators">
-    <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="0" class="active"></button>
-    <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="1"></button>
-  </div>
-
-  <div class="carousel-inner">
-
-    <!-- Slide 1 -->
-    <div class="carousel-item active">
-      <img src="assets/clgImg/NSB05801.JPG.jpeg" class="d-block w-100" alt="Slide">
-
-      <div class="carousel-overlay"></div>
-
-      <div class="carousel-caption text-start">
-        <h1>Elevate with Wisdom High</h1>
-        <p>Caring for Safety and Wellbeing</p>
-        <a href="#" class="btn btn-warning">Know More</a>
-      </div>
+    </header>
+    <!-- Floating Badge -->
+    <div id="scrollBadge">
+      <img src="assets/badge.png" alt="Wisdom High Badge" />
     </div>
 
-    <!-- Slide 2 -->
-    <div class="carousel-item">
-      <img src="assets/clgImg/NSB05803.JPG.jpeg" class="d-block w-100" alt="Slide">
+    <!-- HERO -->
+    <section class="main-banner" id="top">
+      <video autoplay muted loop playsinline id="bg-video">
+        <source src="assets/videoplayback.webm" type="video/mp4" />
+      </video>
 
-      <div class="carousel-overlay"></div>
-
-      <div class="carousel-caption text-start">
-        <h1>Quality Education</h1>
-        <p>Building a better future</p>
-        <a href="#" class="btn btn-warning">Know More</a>
-      </div>
-    </div>
-    <div class="carousel-item">
-      <img src="assets/clgImg/NSB05804.JPG.jpeg" class="d-block w-100" alt="Slide">
-
-      <div class="carousel-overlay"></div>
-
-      <div class="carousel-caption text-start">
-        <h1>Quality Education</h1>
-        <p>Building a better future</p>
-        <a href="#" class="btn btn-warning">Know More</a>
-      </div>
-    </div>
-    <div class="carousel-item">
-      <img src="assets/s5.jpg" class="d-block w-100" alt="Slide">
-
-      <div class="carousel-overlay"></div>
-
-      <div class="carousel-caption text-start">
-        <h1>Quality Education</h1>
-        <p>Building a better future</p>
-        <a href="#" class="btn btn-warning">Know More</a>
-      </div>
-    </div>
-    <div class="carousel-item">
-      <img src="assets/g1.jfif" class="d-block w-100" alt="Slide">
-
-      <div class="carousel-overlay"></div>
-
-      <div class="carousel-caption text-start">
-        <h1>Quality Education</h1>
-        <p>Building a better future</p>
-        <a href="#" class="btn btn-warning">Know More</a>
-      </div>
-    </div>
-
-  </div>
-
-  <!-- Controls -->
-  <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
-    <span class="carousel-control-prev-icon"></span>
-  </button>
-
-  <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
-    <span class="carousel-control-next-icon"></span>
-  </button>
-</div>
-
-<section class="info-grid ">
-  <div class="container">
-    <div class="row g-4">
-
-      <!-- CARD -->
-      <div class="col-lg-3 col-md-6 scroll-reveal">
-        <div class="info-card">
-          <img src="assets/c1.jpg" alt="">
-          <div class="info-overlay">
-            <h5>Seamless Admission Process</h5>
-            <a href="#">Know More</a>
+      <div class="video-overlay scroll-reveal">
+        <div class="container">
+          <div class="caption">
+            <h2>Welcome to LMB Public School</h2>
+            <!-- <h2>Welcome to Education</h2> -->
+            <h4>A place where learning begins and dreams take shape.</h4>
+            <a href="#" class="btn btn-danger rounded-pill px-4"
+              >Join Us Now!</a
+            >
           </div>
         </div>
       </div>
+    </section>
 
-      <div class="col-lg-3 col-md-6 scroll-reveal">
-        <div class="info-card">
-          <img src="assets/c2.jpg" alt="">
-          <div class="info-overlay">
-            <h5>FAQs</h5>
+    <section class="exam-success-wrapper scroll-reveal">
+      <section class="exam-success-strip">
+        <div class="container">
+          <div class="strip-content scroll-reveal">
+            <h3 class="scroll-reveal">
+              Learning Today. Leading Tomorrow.
+              <!-- <span>Learning Today. Leading Tomorrow.</span> -->
+            </h3>
+            <a href="#" class="know-more-btn">Know More</a>
           </div>
         </div>
+      </section>
+    </section>
+    <!-- carsoul -->
+    <div id="heroCarousel" class="carousel slide carousel-fade scroll-reveal">
+      <!-- Indicators (optional) -->
+      <div class="carousel-indicators">
+        <button
+          type="button"
+          data-bs-target="#heroCarousel"
+          data-bs-slide-to="0"
+          class="active"
+        ></button>
+        <button
+          type="button"
+          data-bs-target="#heroCarousel"
+          data-bs-slide-to="1"
+        ></button>
       </div>
-
-      <div class="col-lg-3 col-md-6 scroll-reveal">
-        <div class="info-card">
-          <img src="assets/c4.jpg" alt="">
-          <div class="info-overlay">
-            <h5>Our Alumni</h5>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-lg-3 col-md-6 scroll-reveal">
-        <div class="info-card">
-          <img src="assets/c5.jfif" alt="">
-          <div class="info-overlay">
-            <h5>Results</h5>
-          </div>
-        </div>
-      </div>
-      <!-- CARD -->
-      <div class="col-lg-3 col-md-6 scroll-reveal">
-        <div class="info-card">
-          <img src="assets/c1.jpg" alt="">
-          <div class="info-overlay">
-            <h5>Seamless Admission Process</h5>
-            <a href="#">Know More</a>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-lg-3 col-md-6 scroll-reveal">
-        <div class="info-card">
-          <img src="assets/c2.jpg" alt="">
-          <div class="info-overlay">
-            <h5>FAQs</h5>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-lg-3 col-md-6 scroll-reveal">
-        <div class="info-card">
-          <img src="assets/c4.jpg" alt="">
-          <div class="info-overlay">
-            <h5>Our Alumni</h5>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-lg-3 col-md-6 scroll-reveal">
-        <div class="info-card">
-          <img src="assets/c5.jfif" alt="">
-          <div class="info-overlay">
-            <h5>Results</h5>
-          </div>
-        </div>
-      </div>
-      <!-- CARD -->
-      <div class="col-lg-3 col-md-6 scroll-reveal">
-        <div class="info-card">
-          <img src="assets/c1.jpg" alt="">
-          <div class="info-overlay">
-            <h5>Seamless Admission Process</h5>
-            <a href="#">Know More</a>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-lg-3 col-md-6 scroll-reveal">
-        <div class="info-card">
-          <img src="assets/c2.jpg" alt="">
-          <div class="info-overlay">
-            <h5>FAQs</h5>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-lg-3 col-md-6 scroll-reveal">
-        <div class="info-card">
-          <img src="assets/c4.jpg" alt="">
-          <div class="info-overlay">
-            <h5>Our Alumni</h5>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-lg-3 col-md-6 scroll-reveal">
-        <div class="info-card">
-          <img src="assets/c5.jfif" alt="">
-          <div class="info-overlay">
-            <h5>Results</h5>
-          </div>
-        </div>
-      </div>
-
-
-    </div>
-  </div>
-</section>
-
-<section class="stats-section ">
-  <div class="container">
-    <div class="row g-4 text-center">
-
-      <div class="col-lg-3 col-md-6 scroll-reveal">
-        <div class="stat-box">
-          <div class="stat-icon">
-            <img src="assets/st1.png" alt="">
-          </div>
-          <h4>3 campuses</h4>
-          <p>&nbsp;</p>
-        </div>
-      </div>
-
-      <div class="col-lg-3 col-md-6 scroll-reveal">
-        <div class="stat-box">
-          <div class="stat-icon">
-            <img src="assets/st2.png" alt="">
-          </div>
-          <h4>5 Curriculums</h4>
-          <p>ICSE & ISC / Cambridge</p>
-        </div>
-      </div>
-
-      <div class="col-lg-3 col-md-6 scroll-reveal">
-        <div class="stat-box">
-          <div class="stat-icon">
-            <img src="assets/st3.png" alt="">
-          </div>
-          <h4>3200+ students</h4>
-          <p>A commitment towards excellence</p>
-        </div>
-      </div>
-
-      <div class="col-lg-3 col-md-6 scroll-reveal">
-        <div class="stat-box">
-          <div class="stat-icon">
-            <img src="assets/st4.png" alt="">
-          </div>
-          <h4>27 years</h4>
-          <p>through education</p>
-        </div>
-      </div>
-
-      <div class="col-lg-3 col-md-6 scroll-reveal">
-        <div class="stat-box">
-          <div class="stat-icon">
-            <img src="assets/st6.png" alt="">
-          </div>
-          <h4>2000+ Alumni</h4>
-          <p>A legacy that lasts</p>
-        </div>
-      </div>
-
-      <div class="col-lg-3 col-md-6 scroll-reveal">
-        <div class="stat-box">
-          <div class="stat-icon">
-            <img src="assets/st7.png" alt="">
-          </div>
-          <h4>300+ Educators</h4>
-          <p>creating leaders for tomorrow</p>
-        </div>
-      </div>
-
-      <div class="col-lg-3 col-md-6 scroll-reveal">
-        <div class="stat-box">
-          <div class="stat-icon">
-            <img src="assets/st8.png" alt="">
-          </div>
-          <h4>600+ staff</h4>
-          <p>Bonding as a team</p>
-        </div>
-      </div>
-
-      <div class="col-lg-3 col-md-6 scroll-reveal">
-        <div class="stat-box">
-          <div class="stat-icon">
-            <img src="assets/st9.png" alt="">
-          </div>
-          <h4>2500+ Student placement</h4>
-          <p>in top universities India & Abroad</p>
-        </div>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-<!-- testmonial -->
- 
-<!-- news section -->
- <section class="py-4 bg-white border-top border-bottom scroll-reveal">
-  <div class="container">
-    <h5 class="text-center fw-bold mb-3 text-primary" style="background-color: yellow; height: 30px; ">PAPER NEWS</h5>
-
-    <div id="newsCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000">
 
       <div class="carousel-inner">
-
-        <!-- SLIDE 1 -->
+        <!-- Slide 1 -->
         <div class="carousel-item active">
-          <div class="d-flex justify-content-center gap-3">
+          <img
+            src="assets/clgImg/NSB05801.JPG.jpeg"
+            class="d-block w-100"
+            alt="Slide"
+          />
 
-            <img src="assets/n1.jpg"
-                 class="news-img"
-                 data-bs-toggle="modal"
-                 data-bs-target="#imageModal"
-                 onclick="showImage(this.src)">
+          <div class="carousel-overlay"></div>
 
-            <img src="assets/n2.webp"
-                 class="news-img"
-                 data-bs-toggle="modal"
-                 data-bs-target="#imageModal"
-                 onclick="showImage(this.src)">
-
-            <img src="assets/n3.jfif"
-                 class="news-img"
-                 data-bs-toggle="modal"
-                 data-bs-target="#imageModal"
-                 onclick="showImage(this.src)">
-            <img src="assets/n5.webp"
-                 class="news-img"
-                 data-bs-toggle="modal"
-                 data-bs-target="#imageModal"
-                 onclick="showImage(this.src)">
-            <img src="assets/n5.webp"
-                 class="news-img"
-                 data-bs-toggle="modal"
-                 data-bs-target="#imageModal"
-                 onclick="showImage(this.src)">
+          <div class="carousel-caption text-start">
+            <h1>Elevate with Wisdom High</h1>
+            <p>Caring for Safety and Wellbeing</p>
+            <a href="#" class="btn btn-warning">Know More</a>
           </div>
         </div>
 
-        <!-- SLIDE 2 -->
+        <!-- Slide 2 -->
         <div class="carousel-item">
-          <div class="d-flex justify-content-center gap-3">
+          <img
+            src="assets/clgImg/NSB05803.JPG.jpeg"
+            class="d-block w-100"
+            alt="Slide"
+          />
 
-             <img src="assets/n1.jpg"
-                 class="news-img"
-                 data-bs-toggle="modal"
-                 data-bs-target="#imageModal"
-                 onclick="showImage(this.src)">
+          <div class="carousel-overlay"></div>
 
-            <img src="assets/n2.webp"
-                 class="news-img"
-                 data-bs-toggle="modal"
-                 data-bs-target="#imageModal"
-                 onclick="showImage(this.src)">
-
-            <img src="assets/n3.jfif"
-                 class="news-img"
-                 data-bs-toggle="modal"
-                 data-bs-target="#imageModal"
-                 onclick="showImage(this.src)">
-            <img src="assets/n5.webp"
-                 class="news-img"
-                 data-bs-toggle="modal"
-                 data-bs-target="#imageModal"
-                 onclick="showImage(this.src)">
-            <img src="assets/n5.webp"
-                 class="news-img"
-                 data-bs-toggle="modal"
-                 data-bs-target="#imageModal"
-                 onclick="showImage(this.src)">
+          <div class="carousel-caption text-start">
+            <h1>Quality Education</h1>
+            <p>Building a better future</p>
+            <a href="#" class="btn btn-warning">Know More</a>
           </div>
         </div>
+        <div class="carousel-item">
+          <img
+            src="assets/clgImg/NSB05804.JPG.jpeg"
+            class="d-block w-100"
+            alt="Slide"
+          />
 
+          <div class="carousel-overlay"></div>
+
+          <div class="carousel-caption text-start">
+            <h1>Quality Education</h1>
+            <p>Building a better future</p>
+            <a href="#" class="btn btn-warning">Know More</a>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="assets/s5.jpg" class="d-block w-100" alt="Slide" />
+
+          <div class="carousel-overlay"></div>
+
+          <div class="carousel-caption text-start">
+            <h1>Quality Education</h1>
+            <p>Building a better future</p>
+            <a href="#" class="btn btn-warning">Know More</a>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="assets/g1.jfif" class="d-block w-100" alt="Slide" />
+
+          <div class="carousel-overlay"></div>
+
+          <div class="carousel-caption text-start">
+            <h1>Quality Education</h1>
+            <p>Building a better future</p>
+            <a href="#" class="btn btn-warning">Know More</a>
+          </div>
+        </div>
       </div>
 
-      <!-- CONTROLS -->
-      <button class="carousel-control-prev" type="button" data-bs-target="#newsCarousel" data-bs-slide="prev">
+      <!-- Controls -->
+      <button
+        class="carousel-control-prev"
+        type="button"
+        data-bs-target="#heroCarousel"
+        data-bs-slide="prev"
+      >
         <span class="carousel-control-prev-icon"></span>
       </button>
 
-      <button class="carousel-control-next" type="button" data-bs-target="#newsCarousel" data-bs-slide="next">
+      <button
+        class="carousel-control-next"
+        type="button"
+        data-bs-target="#heroCarousel"
+        data-bs-slide="next"
+      >
         <span class="carousel-control-next-icon"></span>
       </button>
-
     </div>
+<!--  -->
+    <section class="whgs-vm-section">
+  <div class="container">
+
+    <!-- VISION -->
+    <div class="whgs-vm-row">
+      <div class="whgs-vm-text">
+        <div class="whgs-icon-circle">
+          <img src="https://cdn-icons-png.flaticon.com/512/747/747376.png">
+        </div>
+        <h3>Our Vision</h3>
+        <p>
+          To emerge as a leading educational institution that empowers students
+          with knowledge, values and confidence, enabling them to succeed in a
+          rapidly evolving world while contributing positively to society.
+        </p>
+      </div>
+
+      <div class="whgs-vm-image">
+        <img src="./assets/clgImg/NSB05801.JPG.jpeg" alt="Vision Image">
+      </div>
+    </div>
+
+    <!-- MISSION -->
+    <div class="whgs-vm-row reverse">
+      <div class="whgs-vm-image">
+        <img src="./assets/clgImg/NSB05808.JPG.jpeg" alt="Mission Image">
+      </div>
+
+      <div class="whgs-vm-text dark">
+        <div class="whgs-icon-circle orange">
+          <img src="https://cdn-icons-png.flaticon.com/512/747/747310.png">
+        </div>
+        <h3>Our Mission</h3>
+        <p>
+          To provide a supportive, innovative and value-based learning environment
+          that nurtures academic excellence, creativity, leadership skills and
+          character development in every learner.
+        </p>
+      </div>
+    </div>
+
   </div>
 </section>
-<!-- MODAL -->
-<div class="modal fade" id="imageModal" tabindex="-1">
-  <div class="modal-dialog modal-dialog-centered modal-md">
-    <div class="modal-content">
-      <div class="modal-body p-0">
-        <img id="modalImage" src="" class="w-100">
+
+<!--  -->
+
+    <section class="info-grid">
+      <div class="container">
+        <div class="row g-4">
+          <!-- CARD -->
+          <div class="col-lg-3 col-md-6 scroll-reveal">
+            <div class="info-card">
+              <img src="assets/c1.jpg" alt="" />
+              <div class="info-overlay">
+                <h5>Seamless Admission Process</h5>
+                <a href="#">Know More</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6 scroll-reveal">
+            <div class="info-card">
+              <img src="assets/c2.jpg" alt="" />
+              <div class="info-overlay">
+                <h5>FAQs</h5>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6 scroll-reveal">
+            <div class="info-card">
+              <img src="assets/c4.jpg" alt="" />
+              <div class="info-overlay">
+                <h5>Our Alumni</h5>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6 scroll-reveal">
+            <div class="info-card">
+              <img src="assets/c5.jfif" alt="" />
+              <div class="info-overlay">
+                <h5>Results</h5>
+              </div>
+            </div>
+          </div>
+          <!-- CARD -->
+          <div class="col-lg-3 col-md-6 scroll-reveal">
+            <div class="info-card">
+              <img src="assets/c1.jpg" alt="" />
+              <div class="info-overlay">
+                <h5>Seamless Admission Process</h5>
+                <a href="#">Know More</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6 scroll-reveal">
+            <div class="info-card">
+              <img src="assets/c2.jpg" alt="" />
+              <div class="info-overlay">
+                <h5>FAQs</h5>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6 scroll-reveal">
+            <div class="info-card">
+              <img src="assets/c4.jpg" alt="" />
+              <div class="info-overlay">
+                <h5>Our Alumni</h5>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6 scroll-reveal">
+            <div class="info-card">
+              <img src="assets/c5.jfif" alt="" />
+              <div class="info-overlay">
+                <h5>Results</h5>
+              </div>
+            </div>
+          </div>
+          <!-- CARD -->
+          <div class="col-lg-3 col-md-6 scroll-reveal">
+            <div class="info-card">
+              <img src="assets/c1.jpg" alt="" />
+              <div class="info-overlay">
+                <h5>Seamless Admission Process</h5>
+                <a href="#">Know More</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6 scroll-reveal">
+            <div class="info-card">
+              <img src="assets/c2.jpg" alt="" />
+              <div class="info-overlay">
+                <h5>FAQs</h5>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6 scroll-reveal">
+            <div class="info-card">
+              <img src="assets/c4.jpg" alt="" />
+              <div class="info-overlay">
+                <h5>Our Alumni</h5>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6 scroll-reveal">
+            <div class="info-card">
+              <img src="assets/c5.jfif" alt="" />
+              <div class="info-overlay">
+                <h5>Results</h5>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- msges -->
+    <section class="whgs-message-section">
+      <div class="container">
+        <div class="whgs-message-wrapper">
+          <!-- Message 1 -->
+          <div class="whgs-message-card active">
+            <div class="row align-items-center">
+              <div class="col-md-3 text-center">
+                <img
+                  src="./assets/clgImg/p50.jpg.jpeg"
+                  class="whgs-message-img"
+                  alt="Principal"
+                />
+              </div>
+
+              <div class="col-md-9">
+                <h3 class="whgs-message-title">Message from Principal</h3>
+                <p class="whgs-message-text">
+                  At LMB Public School, we believe education is not just about
+                  books, but about building character, confidence and curiosity.
+                  Our dedicated teachers work tirelessly to guide students on
+                  the path of knowledge and success. Together, we create a
+                  joyful learning journey for every child.
+                </p>
+                <span class="whgs-message-name">— Dr. ABC XYZ</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Message 2 -->
+          <div class="whgs-message-card">
+            <div class="row align-items-center">
+              <div class="col-md-3 text-center">
+                <img
+                  src="management.jpg"
+                  class="whgs-message-img"
+                  alt="Management"
+                />
+              </div>
+
+              <div class="col-md-9">
+                <h3 class="whgs-message-title">Message from Management</h3>
+                <p class="whgs-message-text">
+                  Wisdom High is committed to academic excellence and holistic
+                  development. We strive to provide a safe, inspiring and
+                  innovative learning environment for every student.
+                </p>
+                <span class="whgs-message-name">— Management Team</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Message 3 -->
+          <!-- <div class="whgs-message-card">
+        <div class="row align-items-center">
+
+          <div class="col-md-3 text-center">
+            <img src="vice-principal.jpg" class="whgs-message-img" alt="Vice Principal">
+          </div>
+
+          <div class="col-md-9">
+            <h3 class="whgs-message-title">Message from Vice Principal</h3>
+            <p class="whgs-message-text">
+              Our focus is to encourage creativity, discipline and lifelong learning.
+              Together with parents and teachers, we ensure students grow into responsible citizens.
+            </p>
+            <span class="whgs-message-name">— Vice Principal</span>
+          </div>
+
+        </div>
+      </div> -->
+        </div>
+      </div>
+    </section>
+
+    <section class="stats-section">
+      <div class="container">
+        <div class="row g-4 text-center">
+          <div class="col-lg-3 col-md-6 scroll-reveal">
+            <div class="stat-box">
+              <div class="stat-icon">
+                <img src="assets/st1.png" alt="" />
+              </div>
+              <h4>3 campuses</h4>
+              <p>&nbsp;</p>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6 scroll-reveal">
+            <div class="stat-box">
+              <div class="stat-icon">
+                <img src="assets/st2.png" alt="" />
+              </div>
+              <h4>5 Curriculums</h4>
+              <p>ICSE & ISC / Cambridge</p>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6 scroll-reveal">
+            <div class="stat-box">
+              <div class="stat-icon">
+                <img src="assets/st3.png" alt="" />
+              </div>
+              <h4>3200+ students</h4>
+              <p>A commitment towards excellence</p>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6 scroll-reveal">
+            <div class="stat-box">
+              <div class="stat-icon">
+                <img src="assets/st4.png" alt="" />
+              </div>
+              <h4>27 years</h4>
+              <p>through education</p>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6 scroll-reveal">
+            <div class="stat-box">
+              <div class="stat-icon">
+                <img src="assets/st6.png" alt="" />
+              </div>
+              <h4>2000+ Alumni</h4>
+              <p>A legacy that lasts</p>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6 scroll-reveal">
+            <div class="stat-box">
+              <div class="stat-icon">
+                <img src="assets/st7.png" alt="" />
+              </div>
+              <h4>300+ Educators</h4>
+              <p>creating leaders for tomorrow</p>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6 scroll-reveal">
+            <div class="stat-box">
+              <div class="stat-icon">
+                <img src="assets/st8.png" alt="" />
+              </div>
+              <h4>600+ staff</h4>
+              <p>Bonding as a team</p>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6 scroll-reveal">
+            <div class="stat-box">
+              <div class="stat-icon">
+                <img src="assets/st9.png" alt="" />
+              </div>
+              <h4>2500+ Student placement</h4>
+              <p>in top universities India & Abroad</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- testmonial -->
+
+    <!-- news section -->
+    <section class="py-4 bg-white border-top border-bottom scroll-reveal">
+      <div class="container">
+        <h5
+          class="text-center fw-bold mb-3 text-primary"
+          style="background-color: yellow; height: 30px"
+        >
+          PAPER NEWS
+        </h5>
+
+        <div
+          id="newsCarousel"
+          class="carousel slide"
+          data-bs-ride="carousel"
+          data-bs-interval="3000"
+        >
+          <div class="carousel-inner">
+            <!-- SLIDE 1 -->
+            <div class="carousel-item active">
+              <div class="d-flex justify-content-center gap-3">
+                <img
+                  src="assets/n1.jpg"
+                  class="news-img"
+                  data-bs-toggle="modal"
+                  data-bs-target="#imageModal"
+                  onclick="showImage(this.src)"
+                />
+
+                <img
+                  src="assets/n2.webp"
+                  class="news-img"
+                  data-bs-toggle="modal"
+                  data-bs-target="#imageModal"
+                  onclick="showImage(this.src)"
+                />
+
+                <img
+                  src="assets/n3.jfif"
+                  class="news-img"
+                  data-bs-toggle="modal"
+                  data-bs-target="#imageModal"
+                  onclick="showImage(this.src)"
+                />
+                <img
+                  src="assets/n5.webp"
+                  class="news-img"
+                  data-bs-toggle="modal"
+                  data-bs-target="#imageModal"
+                  onclick="showImage(this.src)"
+                />
+                <img
+                  src="assets/n5.webp"
+                  class="news-img"
+                  data-bs-toggle="modal"
+                  data-bs-target="#imageModal"
+                  onclick="showImage(this.src)"
+                />
+              </div>
+            </div>
+
+            <!-- SLIDE 2 -->
+            <div class="carousel-item">
+              <div class="d-flex justify-content-center gap-3">
+                <img
+                  src="assets/n1.jpg"
+                  class="news-img"
+                  data-bs-toggle="modal"
+                  data-bs-target="#imageModal"
+                  onclick="showImage(this.src)"
+                />
+
+                <img
+                  src="assets/n2.webp"
+                  class="news-img"
+                  data-bs-toggle="modal"
+                  data-bs-target="#imageModal"
+                  onclick="showImage(this.src)"
+                />
+
+                <img
+                  src="assets/n3.jfif"
+                  class="news-img"
+                  data-bs-toggle="modal"
+                  data-bs-target="#imageModal"
+                  onclick="showImage(this.src)"
+                />
+                <img
+                  src="assets/n5.webp"
+                  class="news-img"
+                  data-bs-toggle="modal"
+                  data-bs-target="#imageModal"
+                  onclick="showImage(this.src)"
+                />
+                <img
+                  src="assets/n5.webp"
+                  class="news-img"
+                  data-bs-toggle="modal"
+                  data-bs-target="#imageModal"
+                  onclick="showImage(this.src)"
+                />
+              </div>
+            </div>
+          </div>
+
+          <!-- CONTROLS -->
+          <button
+            class="carousel-control-prev"
+            type="button"
+            data-bs-target="#newsCarousel"
+            data-bs-slide="prev"
+          >
+            <span class="carousel-control-prev-icon"></span>
+          </button>
+
+          <button
+            class="carousel-control-next"
+            type="button"
+            data-bs-target="#newsCarousel"
+            data-bs-slide="next"
+          >
+            <span class="carousel-control-next-icon"></span>
+          </button>
+        </div>
+      </div>
+    </section>
+    <!-- MODAL -->
+    <div class="modal fade" id="imageModal" tabindex="-1">
+      <div class="modal-dialog modal-dialog-centered modal-md">
+        <div class="modal-content">
+          <div class="modal-body p-0">
+            <img id="modalImage" src="" class="w-100" />
+          </div>
+        </div>
       </div>
     </div>
-  </div>
-</div>
+    <section class="contact-section py-5">
+      <div class="container">
+        <div class="row g-4 align-items-stretch">
+          <!-- LEFT FORM -->
+          <div class="col-lg-8">
+            <div class="contact-card animate-left">
+              <h3 class="mb-4">LET'S GET IN TOUCH</h3>
 
-<footer class="main-footer reveal-up">
-  <div class="container">
-    <div class="row">
+              <form>
+                <div class="row g-3">
+                  <div class="col-md-4">
+                    <input
+                      type="text"
+                      class="form-control"
+                      placeholder="Your Name*"
+                      required
+                    />
+                  </div>
+                  <div class="col-md-4">
+                    <input
+                      type="email"
+                      class="form-control"
+                      placeholder="Your Email*"
+                      required
+                    />
+                  </div>
+                  <div class="col-md-4">
+                    <input
+                      type="text"
+                      class="form-control"
+                      placeholder="Subject*"
+                      required
+                    />
+                  </div>
+                  <div class="col-12">
+                    <textarea
+                      class="form-control"
+                      rows="5"
+                      placeholder="Your Message..."
+                      required
+                    ></textarea>
+                  </div>
+                  <div class="col-12">
+                    <button class="btn contact-btn">SEND MESSAGE NOW</button>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
 
-      <!-- About -->
-      <div class="col-lg-4 col-md-6 mb-4">
-        <h5>About Us</h5>
-        <p>
-          We are committed to providing quality education with modern
-          infrastructure, expert faculty, and excellent placement support.
-        </p>
+          <!-- RIGHT INFO -->
+          <div class="col-lg-4">
+            <div class="contact-info animate-right">
+              <div class="info-item">
+                <h6>Phone Number</h6>
+                <p>010-020-0340</p>
+              </div>
+
+              <div class="info-item">
+                <h6>Email Address</h6>
+                <p>info@meeting.edu</p>
+              </div>
+
+              <div class="info-item">
+                <h6>Street Address</h6>
+                <p>Rio de Janeiro - RJ,<br />22795-008, Brazil</p>
+              </div>
+
+              <div class="info-item">
+                <h6>Website URL</h6>
+                <p>www.meeting.edu</p>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
+    </section>
 
-      <!-- Quick Links -->
-      <div class="col-lg-2 col-md-6 mb-4">
-        <h5>Quick Links</h5>
-        <ul class="footer-links">
-          <li><a href="#">Home</a></li>
-          <li><a href="#">About</a></li>
-          <li><a href="#">Courses</a></li>
-          <li><a href="#">Admissions</a></li>
-          <li><a href="#">Contact</a></li>
-        </ul>
+    <footer class="main-footer reveal-up">
+      <div class="container">
+        <div class="row">
+          <!-- About -->
+          <div class="col-lg-4 col-md-6 mb-4">
+            <h5>About Us</h5>
+            <p>
+              We are committed to providing quality education with modern
+              infrastructure, expert faculty, and excellent placement support.
+            </p>
+          </div>
+
+          <!-- Quick Links -->
+          <div class="col-lg-2 col-md-6 mb-4">
+            <h5>Quick Links</h5>
+            <ul class="footer-links">
+              <li><a href="#">Home</a></li>
+              <li><a href="#">About</a></li>
+              <li><a href="#">Courses</a></li>
+              <li><a href="#">Admissions</a></li>
+              <li><a href="#">Contact</a></li>
+            </ul>
+          </div>
+
+          <!-- Courses -->
+          <div class="col-lg-3 col-md-6 mb-4">
+            <h5>Our Courses</h5>
+            <ul class="footer-links">
+              <li><a href="#">Engineering</a></li>
+              <li><a href="#">Management</a></li>
+              <li><a href="#">Computer Science</a></li>
+              <li><a href="#">Diploma</a></li>
+            </ul>
+          </div>
+
+          <!-- Contact -->
+          <div class="col-lg-3 col-md-6 mb-4">
+            <h5>Contact Info</h5>
+            <p>
+              📍 Bramhapuri, Maharashtra <br />
+              📞 +91 7620651831 <br />
+              ✉️ info@example.com
+            </p>
+          </div>
+        </div>
+
+        <hr />
+
+        <div class="footer-bottom text-center">
+          <p>© 2026 LMB Public School. All Rights Reserved.</p>
+          <p>Desgin and Developed by Abhijeet Mudholkar</p>
+        </div>
       </div>
+    </footer>
 
-      <!-- Courses -->
-      <div class="col-lg-3 col-md-6 mb-4">
-        <h5>Our Courses</h5>
-        <ul class="footer-links">
-          <li><a href="#">Engineering</a></li>
-          <li><a href="#">Management</a></li>
-          <li><a href="#">Computer Science</a></li>
-          <li><a href="#">Diploma</a></li>
-        </ul>
-      </div>
+    <!-- enquiry -->
+    <a
+      href="https://wa.me/7620651831?text=Hello%20I%20want%20to%20enquire%20about%20admission"
+      class="abj-wa-float"
+      target="_blank"
+      aria-label="Chat on WhatsApp"
+    >
+      <img
+        src="https://cdn-icons-png.flaticon.com/512/733/733585.png"
+        alt="WhatsApp"
+      />
+    </a>
 
-      <!-- Contact -->
-      <div class="col-lg-3 col-md-6 mb-4">
-        <h5>Contact Info</h5>
-        <p>
-          📍 Bramhapuri, Maharashtra <br>
-          📞 +91 7620651831 <br>
-          ✉️ info@example.com
-        </p>
-      </div>
-
-    </div>
-
-    <hr>
-
-    <div class="footer-bottom text-center">
-      <p>© 2026 LMB Public School. All Rights Reserved.</p>
-      <p>Desgin and Developed by Abhijeet Mudholkar</p>
-    </div>
-  </div>
-</footer>
-
-<!-- enquiry -->
- <a href="https://wa.me/7620651831?text=Hello%20I%20want%20to%20enquire%20about%20admission"
-   class="abj-wa-float"
-   target="_blank"
-   aria-label="Chat on WhatsApp">
-
-  <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png"
-       alt="WhatsApp">
-</a>
-
-
-
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-<script src="script.js"></script>
-</body>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+  </body>
 </html>
