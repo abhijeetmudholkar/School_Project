@@ -639,7 +639,7 @@ body {
 
 
 /* enquiry */
-/* .abj-wa-float {
+.abj-wa-float {
   position: fixed;
   right: 20px;
   bottom: 25px;
@@ -662,10 +662,10 @@ body {
 
 .abj-wa-float:hover {
   transform: scale(1.1);
-} */
+}
 
 /* Mobile fix */
-/* @media (max-width: 768px) {
+@media (max-width: 768px) {
   .abj-wa-float {
     right: 15px;
     bottom: 20px;
@@ -677,7 +677,7 @@ body {
     width: 30px;
     height: 30px;
   }
-} */
+}
 
 /* CONTACT SECTION */
 /* .contact-section{
