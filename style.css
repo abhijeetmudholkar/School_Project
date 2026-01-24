@@ -23,59 +23,6 @@ body {
   background: #fff;
   font-family: Arial, sans-serif;
 }
-/* POPUP MODAL */
-.admission-modal .modal-dialog{
-  max-width:90%;
-}
-
-.admission-content{
-  background:transparent;
-  border:none;
-  position:relative;
-  animation:popupZoom .6s ease;
-}
-
-/* IMAGE */
-.admission-content img{
-  width:100%;
-  border-radius:20px;
-  box-shadow:0 25px 60px rgba(0,0,0,.4);
-}
-
-/* CLOSE BUTTON */
-.popup-close{
-  position:absolute;
-  top:-15px;
-  right:-15px;
-  background:#143a59;
-  opacity:1;
-  border-radius:50%;
-  padding:10px;
-  z-index:10;
-}
-.popup-close:hover{
-  opacity:.9;
-}
-
-/* ANIMATION */
-@keyframes popupZoom{
-  from{
-    transform:scale(.8);
-    opacity:0;
-  }
-  to{
-    transform:scale(1);
-    opacity:1;
-  }
-}
-
-/* MOBILE */
-@media(max-width:768px){
-  .popup-close{
-    top:10px;
-    right:10px;
-  }
-}
 
 /* scroll badge */
 #scrollBadge {
@@ -692,7 +639,7 @@ body {
 
 
 /* enquiry */
-.abj-wa-float {
+/* .abj-wa-float {
   position: fixed;
   right: 20px;
   bottom: 25px;
@@ -715,10 +662,10 @@ body {
 
 .abj-wa-float:hover {
   transform: scale(1.1);
-}
+} */
 
 /* Mobile fix */
-@media (max-width: 768px) {
+/* @media (max-width: 768px) {
   .abj-wa-float {
     right: 15px;
     bottom: 20px;
@@ -730,15 +677,15 @@ body {
     width: 30px;
     height: 30px;
   }
-}
+} */
 
 /* CONTACT SECTION */
-.contact-section{
+/* .contact-section{
   background:#fff;
-}
+} */
 
 /* LEFT CARD */
-.contact-card{
+/* .contact-card{
   background:#fff;
   border-radius:25px;
   padding:40px;
@@ -748,20 +695,20 @@ body {
 .contact-card h3{
   color:#143a59;
   font-weight:700;
-}
+} */
 
 /* INPUTS */
-.contact-card .form-control{
+/* .contact-card .form-control{
   border-radius:30px;
   padding:14px 18px;
   border:1px solid #ddd;
 }
 .contact-card textarea{
   border-radius:18px;
-}
+} */
 
 /* BUTTON */
-.contact-btn{
+/* .contact-btn{
   background:#143a59;
   color:#fff;
   border-radius:30px;
@@ -772,10 +719,10 @@ body {
 .contact-btn:hover{
   background:#0f2e45;
   transform:translateY(-2px);
-}
+} */
 
 /* RIGHT INFO CARD */
-.contact-info{
+/* .contact-info{
   background:#143a59;
   color:#fff;
   border-radius:25px;
@@ -791,10 +738,10 @@ body {
 .contact-info p{
   opacity:.9;
   margin-bottom:25px;
-}
+} */
 
 /* ANIMATIONS */
-.animate-left{
+/* .animate-left{
   opacity:0;
   transform:translateX(-60px);
   animation:slideLeft .8s ease forwards;
@@ -816,14 +763,14 @@ body {
     opacity:1;
     transform:translateX(0);
   }
-}
+} */
 
 /* MOBILE */
-@media(max-width:991px){
+/* @media(max-width:991px){
   .contact-info{
     text-align:center;
   }
-}
+} */
 
 
 /* ===== Footer Styling ===== */
