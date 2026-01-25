@@ -16,36 +16,43 @@
   <body>
   
     <!-- HEADER -->
-    <header class="header-area header-sticky">
-      <div class="container">
-        <nav class="main-nav">
-          <a href="#" class="logo">LMB Public School</a>
+<header class="header">
+  <div class="nav-container">
+    <div class="logo">LMB Public School</div>
 
-          <ul class="nav">
-            <li><a href="#top">Home</a></li>
-            <li><a href="./Gallery.html">Gallery</a></li>
-            <li><a href="#">Apply Now</a></li>
+    <div class="menu-toggle" id="menuToggle">☰</div>
 
-            <li class="has-sub">
-              <a href="javascript:void(0)">Pages</a>
-              <ul class="sub-menu">
-                <li><a href="#">About Us</a></li>
-                <li><a href="#">Our Team</a></li>
-              </ul>
-            </li>
+    <nav class="nav" id="navMenu">
+      <ul class="nav-list">
+        <li><a href="#">Home</a></li>
+        <li><a href="./About/aboutUs.html">About Us</a></li>
 
-            <li><a href="#">Courses</a></li>
-            <li><a href="#">Contact Us</a></li>
+        <li class="dropdown">
+          <a href="#">Academics ▾</a>
+          <ul class="submenu">
+            <li><a href="academic/preprimary.html">Preschool</a></li>
+            <li><a href="academic/primary-secondary.html"> Primary & Secondary School</a></li>
+            <li><a href="academic/junior-college.html">Junior College</a></li>
           </ul>
+        </li>
 
-          <div class="menu-trigger">
-            <span></span>
-            <span></span>
-            <span></span>
-          </div>
-        </nav>
-      </div>
-    </header>
+        <li><a href="#">Gallery</a></li>
+        <li><a href="#">Student Development</a></li>
+
+        <li class="dropdown">
+          <a href="#">More ▾</a>
+          <ul class="submenu">
+            <li><a href="#">Admissions</a></li>
+            <li><a href="#">Events</a></li>
+            <li><a href="#">Faculty</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
     <!-- Floating Badge -->
     <div id="scrollBadge">
       <img src="assets/badge.png" alt="Wisdom High Badge" />
@@ -426,7 +433,7 @@
             <div class="carousel-item active">
               <div class="d-flex justify-content-center gap-3">
                 <img
-                  src="assets/n1.jpg"
+                  src="assets/news/WhatsApp Image 2026-01-24 at 9.37.19 PM (1).jpeg"
                   class="news-img"
                   data-bs-toggle="modal"
                   data-bs-target="#imageModal"
@@ -434,7 +441,7 @@
                 />
 
                 <img
-                  src="assets/n2.webp"
+                  src="assets/news/WhatsApp Image 2026-01-24 at 9.37.19 PM (2).jpeg"
                   class="news-img"
                   data-bs-toggle="modal"
                   data-bs-target="#imageModal"
@@ -442,21 +449,21 @@
                 />
 
                 <img
-                  src="assets/n3.jfif"
+                  src="assets/news/WhatsApp Image 2026-01-24 at 9.37.19 PM.jpeg"
                   class="news-img"
                   data-bs-toggle="modal"
                   data-bs-target="#imageModal"
                   onclick="showImage(this.src)"
                 />
                 <img
-                  src="assets/n5.webp"
+                  src="assets/news/WhatsApp Image 2026-01-24 at 9.37.20 PM (1).jpeg"
                   class="news-img"
                   data-bs-toggle="modal"
                   data-bs-target="#imageModal"
                   onclick="showImage(this.src)"
                 />
                 <img
-                  src="assets/n5.webp"
+                  src="assets/news/WhatsApp Image 2026-01-24 at 9.37.20 PM.jpeg"
                   class="news-img"
                   data-bs-toggle="modal"
                   data-bs-target="#imageModal"

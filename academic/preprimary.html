@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Pre-Primary | LMB Public School</title>
+<link rel="stylesheet" href="css/academics.css">
+</head>
+<body>
+
+<section class="hero reveal">
+  <div class="hero-slider">
+    <img src="../assets/clgImg/NSB05803.JPG.jpeg" class="active">
+    <img src="../assets/clgImg/NSB05801.JPG.jpeg">
+  </div>
+  <div class="hero-content">
+    <h1>Pre-Primary – Learning Nest</h1>
+    <p>A joyful beginning where curiosity, creativity and confidence grow naturally.</p>
+  </div>
+</section>
+
+<section class="section reveal">
+  <h2>Early Childhood Education</h2>
+  <p>
+    Our Pre-Primary program is designed to nurture young minds through
+    play-based learning, storytelling, music and hands-on activities.
+    Children feel safe, valued and encouraged to explore.
+  </p>
+</section>
+
+<section class="section split reveal">
+  <img src="../assets/clgImg/NSB05801.JPG.jpeg">
+  <div>
+    <h2>What Makes Us Special</h2>
+    <div class="cards">
+      <div class="card"><h4>Play-Based Learning</h4><p>Learning through joy and exploration.</p></div>
+      <div class="card"><h4>Language Skills</h4><p>Early communication and expression.</p></div>
+      <div class="card"><h4>Emotional Growth</h4><p>Confidence, care and social bonding.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="stats">
+  <div><h3>100%</h3><p>Safe Environment</p></div>
+  <div><h3>20+</h3><p>Creative Activities</p></div>
+  <div><h3>1:15</h3><p>Teacher Ratio</p></div>
+</section>
+
+<script>
+// Hero Image Slider
+const slides = document.querySelectorAll(".hero-slider img");
+let current = 0;
+
+function showSlide(index){
+  slides.forEach((img,i)=> img.classList.remove("active"));
+  slides[index].classList.add("active");
+}
+
+setInterval(() => {
+  current = (current + 1) % slides.length;
+  showSlide(current);
+}, 4000); // change every 4s
+
+// Scroll Reveal
+const r = document.querySelectorAll(".reveal");
+const o = new IntersectionObserver(e=>{
+ e.forEach(x=>{
+   if(x.isIntersecting) x.target.classList.add("show");
+ });
+},{threshold:.15});
+r.forEach(el=>o.observe(el));
+
+</script>
+
+</body>
+</html>
