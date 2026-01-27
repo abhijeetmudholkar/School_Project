@@ -449,221 +449,183 @@
     </section>
 
     <!-- testmonial -->
+<section class="testimonial-section scroll-reveal">
+  <div class="container">
+
+    <h2 class="section-title">Testimonials</h2>
+
+    <div class="testimonial-slider">
+
+      <div class="testimonial-track">
+
+        <!-- ITEM 1 -->
+        <div class="testimonial-item">
+          <div class="testimonial-image">
+            <img src="assets/clgImg/NSB05797.JPG.jpeg" alt="">
+          </div>
+          <div class="testimonial-content">
+            <p>
+              Wisdom High Group of Schools has played an instrumental role in shaping
+              our children’s future. The discipline, academics and sports culture are outstanding.
+            </p>
+            <h4>Mr. Sanjay Kotecha</h4>
+            <span>Parent</span>
+          </div>
+        </div>
+
+        <!-- ITEM 2 -->
+        <div class="testimonial-item">
+          <div class="testimonial-image">
+            <img src="https://via.placeholder.com/120" alt="">
+          </div>
+          <div class="testimonial-content">
+            <p>
+              Teachers are highly dedicated and supportive. My child’s confidence
+              and communication skills have improved tremendously.
+            </p>
+            <h4>Anita Deshmukh</h4>
+            <span>Parent</span>
+          </div>
+        </div>
+
+        <!-- ITEM 3 -->
+        <div class="testimonial-item">
+          <div class="testimonial-image">
+            <img src="https://via.placeholder.com/120" alt="">
+          </div>
+          <div class="testimonial-content">
+            <p>
+              A perfect blend of academics and co-curricular activities.
+              Truly grateful for the guidance and mentorship.
+            </p>
+            <h4>Rahul Sharma</h4>
+            <span>Parent</span>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- DOTS -->
+      <div class="dots"></div>
+
+    </div>
+
+  </div>
+</section>
+
+
+
 
     <!-- news section -->
-    <section class="py-4 bg-white border-top border-bottom scroll-reveal">
-      <div class="container">
-        <h5
-          class="text-center fw-bold mb-3 text-primary"
-          style="background-color: yellow; height: 30px"
-        >
-          PAPER NEWS
-        </h5>
+<!-- NEWS SECTION -->
+<section class="news-section py-4 border-top border-bottom">
+  <div class="container">
 
-        <div
-          id="newsCarousel"
-          class="carousel slide"
-          data-bs-ride="carousel"
-          data-bs-interval="3000"
-        >
-          <div class="carousel-inner">
-            <!-- SLIDE 1 -->
-            <div class="carousel-item active">
-              <div class="d-flex justify-content-center gap-3">
-                <img
-                  src="assets/news/WhatsApp Image 2026-01-24 at 9.37.19 PM (1).jpeg"
-                  class="news-img"
-                  data-bs-toggle="modal"
-                  data-bs-target="#imageModal"
-                  onclick="showImage(this.src)"
-                />
+    <h5 class="text-center fw-bold mb-4 text-primary">
+      PAPER NEWS
+    </h5>
 
-                <img
-                  src="assets/news/WhatsApp Image 2026-01-24 at 9.37.19 PM (2).jpeg"
-                  class="news-img"
-                  data-bs-toggle="modal"
-                  data-bs-target="#imageModal"
-                  onclick="showImage(this.src)"
-                />
+    <div class="news-slider">
+      <div class="news-track">
 
-                <img
-                  src="assets/news/WhatsApp Image 2026-01-24 at 9.37.19 PM.jpeg"
-                  class="news-img"
-                  data-bs-toggle="modal"
-                  data-bs-target="#imageModal"
-                  onclick="showImage(this.src)"
-                />
-                <img
-                  src="assets/news/WhatsApp Image 2026-01-24 at 9.37.20 PM (1).jpeg"
-                  class="news-img"
-                  data-bs-toggle="modal"
-                  data-bs-target="#imageModal"
-                  onclick="showImage(this.src)"
-                />
-                <img
-                  src="assets/news/WhatsApp Image 2026-01-24 at 9.37.20 PM.jpeg"
-                  class="news-img"
-                  data-bs-toggle="modal"
-                  data-bs-target="#imageModal"
-                  onclick="showImage(this.src)"
-                />
-              </div>
-            </div>
-
-            <!-- SLIDE 2 -->
-            <div class="carousel-item">
-              <div class="d-flex justify-content-center gap-3">
-                <img
-                  src="assets/n1.jpg"
-                  class="news-img"
-                  data-bs-toggle="modal"
-                  data-bs-target="#imageModal"
-                  onclick="showImage(this.src)"
-                />
-
-                <img
-                  src="assets/n2.webp"
-                  class="news-img"
-                  data-bs-toggle="modal"
-                  data-bs-target="#imageModal"
-                  onclick="showImage(this.src)"
-                />
-
-                <img
-                  src="assets/n3.jfif"
-                  class="news-img"
-                  data-bs-toggle="modal"
-                  data-bs-target="#imageModal"
-                  onclick="showImage(this.src)"
-                />
-                <img
-                  src="assets/n5.webp"
-                  class="news-img"
-                  data-bs-toggle="modal"
-                  data-bs-target="#imageModal"
-                  onclick="showImage(this.src)"
-                />
-                <img
-                  src="assets/n5.webp"
-                  class="news-img"
-                  data-bs-toggle="modal"
-                  data-bs-target="#imageModal"
-                  onclick="showImage(this.src)"
-                />
-              </div>
-            </div>
-          </div>
-
-          <!-- CONTROLS -->
-          <button
-            class="carousel-control-prev"
-            type="button"
-            data-bs-target="#newsCarousel"
-            data-bs-slide="prev"
-          >
-            <span class="carousel-control-prev-icon"></span>
-          </button>
-
-          <button
-            class="carousel-control-next"
-            type="button"
-            data-bs-target="#newsCarousel"
-            data-bs-slide="next"
-          >
-            <span class="carousel-control-next-icon"></span>
-          </button>
+        <!-- IMAGE ITEM -->
+        <div class="news-item">
+          <img src="assets/news/WhatsApp Image 2026-01-24 at 9.37.19 PM (1).jpeg" onclick="openNews(this)">
         </div>
-      </div>
-    </section>
-    <!-- MODAL -->
-    <div class="modal fade" id="imageModal" tabindex="-1">
-      <div class="modal-dialog modal-dialog-centered modal-md">
-        <div class="modal-content">
-          <div class="modal-body p-0">
-            <img id="modalImage" src="" class="w-100" />
-          </div>
+
+        <div class="news-item">
+          <img src="assets/news/WhatsApp Image 2026-01-24 at 9.37.19 PM (2).jpeg" onclick="openNews(this)">
         </div>
+
+        <div class="news-item">
+          <img src="assets/news/WhatsApp Image 2026-01-24 at 9.37.19 PM.jpeg" onclick="openNews(this)">
+        </div>
+
+        <div class="news-item">
+          <img src="assets/news/WhatsApp Image 2026-01-24 at 9.37.20 PM (1).jpeg" onclick="openNews(this)">
+        </div>
+
+        <div class="news-item">
+          <img src="assets/news/WhatsApp Image 2026-01-24 at 9.37.20 PM.jpeg" onclick="openNews(this)">
+        </div>
+
+        <div class="news-item">
+          <img src="assets/news/WhatsApp Image 2026-01-24 at 9.37.21 PM (1).jpeg" onclick="openNews(this)">
+        </div>
+
+        <div class="news-item">
+          <img src="assets/news/WhatsApp Image 2026-01-24 at 9.37.21 PM (2).jpeg" onclick="openNews(this)">
+        </div>
+
+        <div class="news-item">
+          <img src="assets/news/WhatsApp Image 2026-01-24 at 9.37.21 PM (3).jpeg" onclick="openNews(this)">
+        </div>
+
+        <div class="news-item">
+          <img src="assets/news/WhatsApp Image 2026-01-24 at 9.37.21 PM.jpeg" onclick="openNews(this)">
+        </div>
+
+        <div class="news-item">
+          <img src="assets/news/WhatsApp Image 2026-01-24 at 9.37.22 PM (1).jpeg" onclick="openNews(this)">
+        </div>
+        <div class="news-item">
+          <img src="assets/news/WhatsApp Image 2026-01-24 at 9.37.22 PM (2).jpeg" onclick="openNews(this)">
+        </div>
+        <div class="news-item">
+          <img src="assets/news/WhatsApp Image 2026-01-24 at 9.37.22 PM.jpeg" onclick="openNews(this)">
+        </div>
+        <div class="news-item">
+          <img src="assets/news/WhatsApp Image 2026-01-24 at 9.37.23 PM (1).jpeg" onclick="openNews(this)">
+        </div>
+        <div class="news-item">
+          <img src="assets/news/WhatsApp Image 2026-01-24 at 9.37.23 PM (2).jpeg" onclick="openNews(this)">
+        </div>
+        <div class="news-item">
+          <img src="assets/news/WhatsApp Image 2026-01-24 at 9.37.23 PM.jpeg" onclick="openNews(this)">
+        </div>
+        <div class="news-item">
+          <img src="assets/news/WhatsApp Image 2026-01-24 at 9.37.24 PM (1).jpeg" onclick="openNews(this)">
+        </div>
+        <div class="news-item">
+          <img src="assets/news/WhatsApp Image 2026-01-24 at 9.37.24 PM (2).jpeg" onclick="openNews(this)">
+        </div>
+        <div class="news-item">
+          <img src="assets/news/WhatsApp Image 2026-01-24 at 9.37.24 PM.jpeg" onclick="openNews(this)">
+        </div>
+        <div class="news-item">
+          <img src="assets/news/WhatsApp Image 2026-01-24 at 9.37.25 PM (1).jpeg" onclick="openNews(this)">
+        </div>
+        <div class="news-item">
+          <img src="assets/news/WhatsApp Image 2026-01-24 at 9.37.25 PM (2).jpeg" onclick="openNews(this)">
+        </div>
+        <div class="news-item">
+          <img src="assets/news/WhatsApp Image 2026-01-24 at 9.37.26 PM (1).jpeg" onclick="openNews(this)">
+        </div>
+        <div class="news-item">
+          <img src="assets/news/WhatsApp Image 2026-01-24 at 9.37.25 PM.jpeg" onclick="openNews(this)">
+        </div>
+        <div class="news-item">
+          <img src="assets/news/WhatsApp Image 2026-01-24 at 9.37.26 PM (2).jpeg" onclick="openNews(this)">
+        </div>
+       
       </div>
     </div>
-    <!-- <section class="contact-section py-5">
-      <div class="container">
-        <div class="row g-4 align-items-stretch"> -->
-          <!-- LEFT FORM -->
-          <!-- <div class="col-lg-8">
-            <div class="contact-card animate-left">
-              <h3 class="mb-4">LET'S GET IN TOUCH</h3>
 
-              <form>
-                <div class="row g-3">
-                  <div class="col-md-4">
-                    <input
-                      type="text"
-                      class="form-control"
-                      placeholder="Your Name*"
-                      required
-                    />
-                  </div>
-                  <div class="col-md-4">
-                    <input
-                      type="email"
-                      class="form-control"
-                      placeholder="Your Email*"
-                      required
-                    />
-                  </div>
-                  <div class="col-md-4">
-                    <input
-                      type="text"
-                      class="form-control"
-                      placeholder="Subject*"
-                      required
-                    />
-                  </div>
-                  <div class="col-12">
-                    <textarea
-                      class="form-control"
-                      rows="5"
-                      placeholder="Your Message..."
-                      required
-                    ></textarea>
-                  </div>
-                  <div class="col-12">
-                    <button class="btn contact-btn">SEND MESSAGE NOW</button>
-                  </div>
-                </div>
-              </form>
-            </div>
-          </div> -->
+  </div>
+</section>
 
-          <!-- RIGHT INFO -->
-          <!-- <div class="col-lg-4">
-            <div class="contact-info animate-right">
-              <div class="info-item">
-                <h6>Phone Number</h6>
-                <p>010-020-0340</p>
-              </div>
-
-              <div class="info-item">
-                <h6>Email Address</h6>
-                <p>info@meeting.edu</p>
-              </div>
-
-              <div class="info-item">
-                <h6>Street Address</h6>
-                <p>Bramhapuri,<br /> Maharashtra</p>
-              </div>
-
-              <div class="info-item">
-                <h6>Website URL</h6>
-                <p>www.meeting.edu</p>
-              </div>
-            </div>
-          </div>
-        </div>
+<!-- MODAL -->
+<div class="modal fade" id="imageModal" tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered modal-lg">
+    <div class="modal-content">
+      <div class="modal-body p-0">
+        <img id="modalImage" class="w-100">
       </div>
-    </section> -->
+    </div>
+  </div>
+</div>
 
-    <footer class="main-footer reveal-up">
+       <footer class="main-footer reveal-up">
       <div class="container">
         <div class="row">
           <!-- About -->

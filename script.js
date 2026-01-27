@@ -98,18 +98,57 @@ if (window.matchMedia("(min-width:576px)").matches) {
 } else {
   $(multipleItemCarousel).addClass("slide");
 }
-// news
- function showImage(src) {
-    document.getElementById("modalImage").src = src;
+// testimonial
+ document.addEventListener("DOMContentLoaded", function () {
+
+  const track = document.querySelector('.testimonial-track');
+  const items = document.querySelectorAll('.testimonial-item');
+  const dotsContainer = document.querySelector('.dots');
+
+  if (!track || items.length === 0) return;
+
+  let index = 0;
+
+  // CREATE DOTS
+  items.forEach((item, i) => {
+    const dot = document.createElement('span');
+    if (i === 0) dot.classList.add('active');
+    dotsContainer.appendChild(dot);
+
+    dot.addEventListener('click', () => {
+      index = i;
+      updateSlider();
+    });
+  });
+
+  const dots = dotsContainer.querySelectorAll('span');
+
+  function updateSlider() {
+    track.style.transform = `translateX(-${index * 100}%)`;
+    dots.forEach(d => d.classList.remove('active'));
+    dots[index].classList.add('active');
   }
 
+  // AUTO SLIDE (NOW WORKING)
+  setInterval(() => {
+    index++;
+    if (index >= items.length) index = 0;
+    updateSlider();
+  }, 4000);
 
-  // msges
-//  const whgsCards = document.querySelectorAll('.whgs-message-card');
-//   let whgsIndex = 0;
+});
 
-//   setInterval(() => {
-//     whgsCards[whgsIndex].classList.remove('active');
-//     whgsIndex = (whgsIndex + 1) % whgsCards.length;
-//     whgsCards[whgsIndex].classList.add('active');
-//   }, 5000); // change every 5 sec
+// news
+//  function showImage(src){
+//   document.getElementById("modalImage").src = src;
+// }
+
+function openNews(img){
+  const modalImg = document.getElementById("modalImage");
+  modalImg.src = img.src;
+
+  const modal = new bootstrap.Modal(
+    document.getElementById("imageModal")
+  );
+  modal.show();
+}
