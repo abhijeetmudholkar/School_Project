@@ -374,76 +374,91 @@ body {
   }
 }
 /* gallery */
-.info-grid {
-  background: #fff;   /* WHITE SAME AS IMAGE */
-  padding: 60px 0;
+.info-grid{
+  background:#fff;
+  padding:60px 0;
 }
 
-.info-card {
-  position: relative;
-  overflow: hidden;
-  height: 260px;
-  cursor: pointer;
+.info-card{
+  position:relative;
+  overflow:hidden;
+  height:260px;
 }
 
-.info-card img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  transition: transform .4s ease;
+/* IMAGE */
+.info-card img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  transition:transform .4s ease;
 }
 
-/* Overlay */
-.info-overlay {
-  position: absolute;
-  inset: 0;
-  background: rgba(20, 58, 89, 0.9); /* #143a59 */
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  opacity: 0;
-  transition: 0.4s ease;
-  text-align: center;
-  padding: 20px;
+/* 🔵 BOTTOM STRIP – DEFAULT VISIBLE */
+.info-strip{
+  position:absolute;
+  left:0;
+  bottom:0;
+  width:100%;
+  padding:12px 14px;
+  background:#143a59;
+  color:#fff;
+  font-size:16px;
+  font-weight:600;
+  z-index:2;
+  transition:.3s ease;
 }
 
-.info-overlay h5 {
-  color: #fff;
-  font-size: 18px;
-  margin-bottom: 15px;
+/* 🔵 FULL OVERLAY – DEFAULT HIDDEN */
+.info-overlay{
+  position:absolute;
+  inset:0;
+  background:rgba(20,58,89,0.9);
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  opacity:0;
+  transition:.4s ease;
+  z-index:3;
 }
 
-.info-overlay a {
-  color: #143a59;
-  background: #fff;
-  padding: 8px 18px;
-  text-decoration: none;
-  font-size: 14px;
-  border-radius: 4px;
-  transition: 0.3s;
+.info-overlay h5{
+  color:#fff;
+  font-size:18px;
+  margin-bottom:12px;
 }
 
-.info-overlay a:hover {
-  background: #f5a425;
-  color: #fff;
+.info-overlay a{
+  background:#fff;
+  color:#143a59;
+  padding:8px 18px;
+  border-radius:4px;
+  font-size:14px;
+  text-decoration:none;
 }
 
-/* Hover Effects */
-.info-card:hover img {
-  transform: scale(1.1);
+/* ✅ HOVER BEHAVIOUR */
+.info-card:hover img{
+  transform:scale(1.1);
 }
 
-.info-card:hover .info-overlay {
-  opacity: 1;
+.info-card:hover .info-overlay{
+  opacity:1;
 }
 
-/* Mobile Fix */
-@media (max-width: 768px) {
-  .info-card {
-    height: 220px;
+/* 🔥 STRIPE HIDE ON HOVER */
+.info-card:hover .info-strip{
+  opacity:0;
+}
+
+/* MOBILE */
+@media(max-width:768px){
+  .info-card{
+    height:220px;
   }
 }
+
 
 /* gallery */
 .stats-section {
