@@ -330,17 +330,20 @@ body {
 .carousel-item {
   height: 90vh;
   position: relative;
+  transition: transform 0.8s ease-in-out;
 }
 
 .carousel-item img {
   height: 100%;
+  width: 100%;
   object-fit: cover;
+  filter: brightness(0.75); /* lightweight overlay effect instead of separate div */
 }
 
 .carousel-overlay {
   position: absolute;
   inset: 0;
-  background: rgba(0,0,0,0.55);
+  background: rgba(0,0,0,0.4); /* thoda halka overlay, smooth feel */
 }
 
 .carousel-caption {
@@ -352,11 +355,13 @@ body {
   font-size: 3rem;
   font-weight: 700;
   color: #f5c542;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.6);
 }
 
 .carousel-caption p {
   font-size: 1.2rem;
   margin-bottom: 20px;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
 }
 
 /* Mobile Responsive */
@@ -373,6 +378,7 @@ body {
     font-size: 1rem;
   }
 }
+
 /* gallery */
 .info-grid{
   background:#fff;
@@ -659,9 +665,12 @@ body {
 .news-section{
   background:#fff;
 }
-
+.heading{
+      background-color: yellow;
+}
 /* SLIDER */
 .news-slider{
+  
   overflow:hidden;
   width:100%;
   position:relative;
