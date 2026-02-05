@@ -14,11 +14,121 @@ body{
   background:#f8f9fa;
   font-family:"Segoe UI",sans-serif;
 }
+body{
+  padding-top:90px;
+}
+
+@media(max-width:768px){
+  body{
+    padding-top:110px;
+  }
+}
+
+/* HEADER FIXED + PERMANENT COLOR */
+.header{
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 999;
+  background: #0b2c3d; /* scroll ke baad wala color */
+  box-shadow: 0 6px 20px rgba(0,0,0,.15);
+}
+
+/* NAV CONTAINER */
+.nav-container{
+  max-width:1200px;
+  margin:auto;
+  padding:15px 20px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+}
+
+/* LOGO */
+.logo{
+  color:#fff;
+  font-size:20px;
+  font-weight:700;
+}
+
+/* NAV */
+.nav-list{
+  list-style:none;
+  display:flex;
+  gap:25px;
+}
+.nav-list li{
+  position:relative;
+}
+.nav-list a{
+  color:#fff;
+  text-decoration:none;
+  font-weight:600;
+}
+
+/* SUBMENU */
+.submenu{
+  position:absolute;
+  top:120%;
+  left:0;
+  background:#fff;
+  min-width:200px;
+  border-radius:6px;
+  box-shadow:0 10px 25px rgba(0,0,0,.2);
+  opacity:0;
+  visibility:hidden;
+  transition:.3s;
+}
+.submenu a{
+  color:#333;
+  padding:10px 15px;
+  display:block;
+}
+.dropdown:hover .submenu{
+  opacity:1;
+  visibility:visible;
+}
+
+/* MOBILE */
+.menu-toggle{
+  display:none;
+  font-size:26px;
+  color:#fff;
+  cursor:pointer;
+}
+
+@media(max-width:768px){
+  .menu-toggle{display:block;}
+  .nav{
+    position:absolute;
+    top:100%;
+    left:0;
+    width:100%;
+    background:#0b2c3d;
+    display:none;
+  }
+  .nav.active{display:block;}
+  .nav-list{
+    flex-direction:column;
+    text-align:center;
+  }
+  .submenu{
+    position:static;
+    opacity:1;
+    visibility:visible;
+    display:none;
+    box-shadow:none;
+  }
+  .dropdown.active .submenu{
+    display:block;
+  }
+}
+
 
 /* NAVBAR GAP */
-.school-gallery{
+/* .school-gallery{
   padding-top:120px;
-}
+} */
 
 /* HEADING */
 .school-gallery h2{
@@ -109,6 +219,43 @@ body{
 </head>
 
 <body>
+  <header class="header">
+  <div class="nav-container">
+    <div class="logo">LMB Public School</div>
+
+    <div class="menu-toggle" id="menuToggle">☰</div>
+
+    <nav class="nav" id="navMenu">
+      <ul class="nav-list">
+        <li><a href="#">Home</a></li>
+        <li><a href="./About/aboutUs.html">About Us</a></li>
+
+        <li class="dropdown">
+          <a href="#">Academics ▾</a>
+          <ul class="submenu">
+            <li><a href="academic/preprimary.html">Preschool</a></li>
+            <li><a href="academic/primary-secondary.html">Primary & Secondary School</a></li>
+            <li><a href="academic/junior-college.html">Junior College</a></li>
+          </ul>
+        </li>
+
+        <li><a href="Gallery.html">Gallery</a></li>
+        <li><a href="#">Student Development</a></li>
+
+        <li class="dropdown">
+          <a href="#">More ▾</a>
+          <ul class="submenu">
+            <li><a href="#">Admissions</a></li>
+            <li><a href="#">Events</a></li>
+            <li><a href="#">Faculty</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
 
 <section class="school-gallery py-5">
 <div class="container">
@@ -207,6 +354,58 @@ body{
         <img src="./assets/clgImg/WhatsApp Image 2025-10-15 at 09.30.00.jpeg">
       </div>
     </div>
+    <!--  -->
+    <div class="col-lg-4 col-md-6 gallery-item annual">
+      <div class="gallery-card" data-img="./assets/clgImg/gallery/Board.png">
+        <img src="./assets/clgImg/gallery/Board.png">
+      </div>
+    </div>
+    <div class="col-lg-4 col-md-6 gallery-item annual">
+      <div class="gallery-card" data-img="./assets/clgImg/gallery/Computer lab 1.png">
+        <img src="./assets/clgImg/gallery/Computer lab 1.png">
+      </div>
+    </div>
+    <div class="col-lg-4 col-md-6 gallery-item annual">
+      <div class="gallery-card" data-img="./assets/clgImg/gallery/Computer Lab 2.png">
+        <img src="./assets/clgImg/gallery/Computer Lab 2.png">
+      </div>
+    </div>
+    <div class="col-lg-4 col-md-6 gallery-item annual">
+      <div class="gallery-card" data-img="./assets/clgImg/gallery/Interative Board.png">
+        <img src="./assets/clgImg/gallery/Interative Board.png">
+      </div>
+    </div>
+    <div class="col-lg-4 col-md-6 gallery-item annual">
+      <div class="gallery-card" data-img="assets/clgImg/gallery/Library 1.png">
+        <img src="assets/clgImg/gallery/Library 1.png">
+      </div>
+    </div>
+    <div class="col-lg-4 col-md-6 gallery-item annual">
+      <div class="gallery-card" data-img="./assets/clgImg/gallery/Library.png">
+        <img src="./assets/clgImg/gallery/Library.png">
+      </div>
+    </div>
+    <div class="col-lg-4 col-md-6 gallery-item annual">
+      <div class="gallery-card" data-img="./assets/clgImg/gallery/Maths Lab.png">
+        <img src="./assets/clgImg/gallery/Maths Lab.png">
+      </div>
+    </div>
+    <div class="col-lg-4 col-md-6 gallery-item annual">
+      <div class="gallery-card" data-img="./assets/clgImg/gallery/Preschool Activity 1.png">
+        <img src="./assets/clgImg/gallery/Preschool Activity 1.png">
+      </div>
+    </div>
+    <div class="col-lg-4 col-md-6 gallery-item annual">
+      <div class="gallery-card" data-img="./assets/clgImg/gallery/Preschool Activity.png">
+        <img src="./assets/clgImg/gallery/Preschool Activity.png">
+      </div>
+    </div>
+    <div class="col-lg-4 col-md-6 gallery-item annual">
+      <div class="gallery-card" data-img="./assets/clgImg/gallery/Science Lab.png">
+        <img src="./assets/clgImg/gallery/Science Lab.png">
+      </div>
+    </div>
+
 
   </div>
 </div>
@@ -238,6 +437,22 @@ const fade = document.querySelector(".gallery-fade");
 
 let currentIndex = 0;
 let visibleImages = [];
+
+const menuToggle = document.getElementById("menuToggle");
+const navMenu = document.getElementById("navMenu");
+
+menuToggle.onclick = () => {
+  navMenu.classList.toggle("active");
+};
+
+document.querySelectorAll(".dropdown > a").forEach(item => {
+  item.addEventListener("click", e => {
+    if (window.innerWidth <= 768) {
+      e.preventDefault();
+      item.parentElement.classList.toggle("active");
+    }
+  });
+});
 
 /* FILTER */
 buttons.forEach(btn=>{
