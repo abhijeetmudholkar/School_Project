@@ -1,7 +1,14 @@
 /* =========================
    SCROLL REVEAL SCRIPT
 ========================= */
-
+function closeBanner() {
+    const banner = document.getElementById("topBanner");
+    banner.style.transition = "0.4s ease";
+    banner.style.top = "-300px";
+    setTimeout(() => {
+      banner.style.display = "none";
+    }, 400);
+  }
 
 document.addEventListener("DOMContentLoaded", function () {
 
